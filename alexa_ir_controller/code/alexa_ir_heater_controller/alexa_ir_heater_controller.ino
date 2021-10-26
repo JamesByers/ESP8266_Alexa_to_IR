@@ -15,6 +15,7 @@
 #include "fauxmoESP.h"
 #include <IRremoteESP8266.h>
 #include <IRsend.h>
+ls
 #include "credentials.h"  // copy the credentials.sample.h file and add your 
                           // WIFI SSID and password to make a credentials.h file
 
@@ -77,9 +78,9 @@ void setup() {
     // Disabling it will prevent the devices from being discovered and switched
     fauxmo.enable(true);
 
-    fauxmo.addDevice("Heater device 1b");
-    fauxmo.addDevice("Heater device 2b");
-    fauxmo.addDevice("Heater device 3b");
+    fauxmo.addDevice("Heater device 1");
+    fauxmo.addDevice("Heater device 2");
+    fauxmo.addDevice("Heater device 3");
 
     // fauxmoESP 2.0.0 has changed the callback signature to add the device_id,
     // this way it's easier to match devices to action without having to compare strings.
@@ -91,9 +92,9 @@ void setup() {
 
     fauxmo.onSetState([](unsigned char device_id, const char * device_name, bool state) {
         // Transmit IR command for Heater device 1    
-        if (strcmp(device_name, "Heater device 1b") == 0) {
+        if (strcmp(device_name, "Heater device 1") == 0) {
           Serial.println("");
-          Serial.print("Heater Device 1b:");
+          Serial.print("Heater Device 1:");
           Serial.print(state);
           Serial.println("");
           if (state) {
@@ -119,9 +120,9 @@ void setup() {
           }
     
         // Transmit IR command for Heater device 2
-        if (strcmp(device_name, "Heater device 2b") == 0) {
+        if (strcmp(device_name, "Heater device b") == 0) {
           Serial.println("");
-          Serial.print("Heater Device 2b:");
+          Serial.print("Heater Device b:");
           Serial.print(state);
           Serial.println("");
           if (state) {
@@ -136,9 +137,9 @@ void setup() {
     
     
         // Transmit IR command for Heater device 3
-        if (strcmp(device_name, "Heater device 3b") == 0) {
+        if (strcmp(device_name, "Heater device 3") == 0) {
           Serial.println("");
-          Serial.print("Heater Device 3b:");
+          Serial.print("Heater Device 3:");
           Serial.print(state);
           Serial.println("");
           if (state) {
