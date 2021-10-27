@@ -6,9 +6,13 @@ I obtained the IR codes by pushing each button on the remote and capturing it wi
 
 ##### In order to make one of these you will need this hardware:
 * [NodeMCU v1.0 ESP8266 development board](https://www.amazon.com/HiLetgo-Internet-Development-Wireless-Micropython/dp/B010O1G1ES) or other ESP8266 development board
-* 555 timer or small signal transistor to drive the LED
+* Small signal transistor or 555 or small signal transistor to drive the LED
 * Resistors for the driver part of the output circuit
 * IR LED
+
+##### Example circuit:
+* ![Breadboard image](../assets/ESP8266_Alexa_IR_controller_breadboard2.png "ESP_Alexa_IR_controller_circuit")
+* [Fritzing file](../assets/ESP8266_Alexa_IR_controller_w_transistor_2.fzz)
 
 ##### In order to make one of these you will need to install these Arduino libraries
 * fauxmoESP.h  2.4.3 This rev is the last rev that simulated a Wemo plug.  Later 3.x versions simulate a Phillip lightbulb.  The code in this repo will not work with 3.x and latter.
