@@ -5,9 +5,10 @@ This section of the repository demonstrates how to use an ESP-8266 to recieve Al
 I obtained the IR codes by pushing each button on the remote and capturing it with the IR reciever set-up described in the [ir_reciever](../ir_receiver/) folder of this repository. The codes I captured can be seen the [heater_remote_IR_codes](../ir_receiver/heater_remote_IR_codes_v2.txt) file in that folder.  In the Arduino NodeMCU code I used the hexidecimal representation of the IR tramsmissions.
 
 ### In order to make one of these you will need this hardware:
-* [NodeMCU v1.0 ESP8266 development board](https://www.amazon.com/HiLetgo-Internet-Development-Wireless-Micropython/dp/B010O1G1ES) or other ESP8266 development board
-* Small signal transistor or 555 or small signal transistor to drive the LED
-* Resistors for the driver part of the output circuit
+* [NodeMCU v1.0 ESP8266 development board](https://www.amazon.com/HiLetgo-Internet-Development-Wireless-Micropython/dp/B010O1G1ES) or other ESP8266 development board such as the [Adafruit HUZZAH ESP8266 Breakout](https://www.adafruit.com/product/2471) or [SparkFun ESP8266 Thing](https://www.sparkfun.com/products/13231)
+* Small signal transistor such as the 2N2222 or 555 IC to drive the LED
+  * Demonstrating how to use a 555 timer IC instead of a small signal transistor is beyond the scope of this repository.  However you use the 555 in a as shown in this diagram of the connections to the IC.  [This diagram](assets/555_timer_ as_buffer_to_drive_led.png) shows a configuration that puts the 555 into buffer mode of being.  This is a subset of the Bistable Mode and is not shown much on the Web. But it is a very viable use of a 555 IC. The buffer goes in between NodeMCU pin and the LED in order to provide enough current without much load on the pin. Thus it provides the same function as the discrete transistor I show in the photos and breadboard image. There are other 555 diagrams in the [assets](assets/) folder that may also be helpful.
+* 220 Ohm and 470 Ohm resistors
 * IR LED
 
 ### Example circuit:
