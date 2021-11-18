@@ -14,4 +14,4 @@ This repository assumes you know how to use the Arduino IDE and program an Ardui
 ##### Image of the completed controller
 
 ![Completed Alexa ESP8266 IR controller](/assets/Alexa_ESP8286_IR_control_v2.png "Completed Alexa ESP8266 IR controller")
-Yeah, I know that looks like a cold solder joint but it is working fine so I am leaving it as is.
+Yeah, I know that looks like a cold solder joint but it is working reliably so I am leaving it as is.
