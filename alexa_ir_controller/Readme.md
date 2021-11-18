@@ -2,7 +2,7 @@
 This section of the repository demonstrates how to use an ESP-8266 to recieve Alexa commands and transmit corresponding IR commands. Specifically it demonstrates controlling a radiant heater that does not come with any documentation of the IR signals sent.  The NodeMCU Arduino code is available in the [code/alexa_ir_heater_controller](./code/alexa_ir_heater_controller/) folder.
 
 ### The IR codes
-I obtained the IR codes by pushing each button on the remote and capturing it with the IR reciever set-up described in the [ir_receiver](../ir_receiver/) folder of this repository. The codes I captured can be seen the [heater_remote_IR_codes](../ir_receiver/heater_remote_IR_codes_v2.txt) file in that folder.  In the Arduino NodeMCU code I used the hexidecimal representation of the IR tramsmissions.
+I obtained the IR codes by pushing each button on the remote and capturing it with the IR reciever set-up described in the [ir_receiver](../ir_receiver/) folder of this repository. The codes I captured can be seen in the [heater_remote_IR_codes](../ir_receiver/heater_remote_IR_codes_v2.txt) file in that folder.  In the Arduino NodeMCU code I used the hexidecimal representation of the IR tramsmissions.
 
 ### In order to make one of these you will need this hardware:
 * [NodeMCU v1.0 ESP8266 development board](https://www.amazon.com/HiLetgo-Internet-Development-Wireless-Micropython/dp/B010O1G1ES) or other ESP8266 development board such as the [Adafruit HUZZAH ESP8266 Breakout](https://www.adafruit.com/product/2471) or [SparkFun ESP8266 Thing](https://www.sparkfun.com/products/13231)
