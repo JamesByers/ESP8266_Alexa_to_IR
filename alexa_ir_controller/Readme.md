@@ -16,9 +16,9 @@ I obtained the IR codes by pushing each button on the remote and capturing it wi
 * Link to the [Fritzing file](../assets/ESP8266_Alexa_IR_controller_w_transistor_2.fzz) of the breadboard circuit
 
 ### In order to make one of these you will need to install these Arduino libraries
-* fauxmoESP.h  2.4.3 This rev is the last rev that simulated a Wemo plug.  Later 3.x versions simulate a Phillip lightbulb.  The code in this repo will not work with 3.x and latter.
+* fauxmoESP  2.4.3 This rev is the last rev that simulated a Wemo smart plug.  Later 3.x versions simulate a Philips lightbulb.  The code in this repo will not work with 3.x and latter since this code creates three simulated Wemo smart plugs.  Since they can recieve on On and Off commands from Alexa there are a total of six commands we can use.  I have tried adding a 4th Wemo device in the code for additional commands but it appears that Alexa limits the number of Wemo plugs from a single IP address to three.  An improved version of this code would use the newest version of the fauxmo library since it simulates a Philips light providing not only On and Off but 100 levels of brightness.  That would allow you to use 102 commands to the simulated device, a vast improvement.  But I jsut need six so the code in this repo is sufficient for my use.
   * If you are using a development board like the NodeMCU v1.0 that contains a ESP8266 you will need to also install the ESP8266WiFi library
-  * If you development board contains a ESP32 you need to install the WIFI library instead 
+  * If you are using a development board like the NodeMCU v0.9 that contains a ESP32 you will need to install the WIFI library instead 
 * IRremoteESP8266.h
 * IRsend.h
 
