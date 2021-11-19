@@ -11,7 +11,7 @@ I obtained the IR codes by pushing each button on the remote and capturing it wi
 * 220 Ohm and 470 Ohm resistors
 * IR LED
 
-### Example circuit:
+### Alexa to IR tranmitter circuit:
 ![Circuit Diagram](../assets/ESP8266_Alexa_to_IR_circuit_diagram.png "Alexa to IR circuit diagram")
 
 ![Breadboard image](../assets/ESP8266_Alexa_IR_controller_breadboard2.png "ESP_Alexa_IR_controller_circuit")
