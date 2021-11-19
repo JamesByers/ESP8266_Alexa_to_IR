@@ -15,7 +15,6 @@
 #include "fauxmoESP.h"
 #include <IRremoteESP8266.h>
 #include <IRsend.h>
-ls
 #include "credentials.h"  // copy the credentials.sample.h file and add your 
                           // WIFI SSID and password to make a credentials.h file
 
@@ -135,7 +134,6 @@ void setup() {
             }
           }
     
-    
         // Transmit IR command for Heater device 3
         if (strcmp(device_name, "Heater device 3") == 0) {
           Serial.println("");
@@ -158,7 +156,7 @@ void setup() {
 
 void loop() {
 
-    // Since fauxmoESP 2.0 the library uses the "compatibility" mode by
+    // Since fauxmoESP 2.x the library uses the "compatibility" mode by
     // default, this means that it uses WiFiUdp class instead of AsyncUDP.
     // The later requires the Arduino Core for ESP8266 staging version
     // whilst the former works fine with current stable 2.3.0 version.
