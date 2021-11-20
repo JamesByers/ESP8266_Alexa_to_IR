@@ -7,7 +7,7 @@ This repository assumes you know how to use the Arduino IDE and program an Ardui
 1. [alexa_ir_controller](/alexa_ir_controller) (transmitter) - Circuit and code to use an ESP8266 to recieve Alexa commands and then issue the corresponding IR commands through an IR LED
 2. [ir_receiver](/ir_receiver) - Code to detect the IR command signals sent from an IR remote using a IR reciever part
 
-##### See the controller in action:
+##### See the controller in use:
 
 [![The Alexa ESP8266 IR controller in action (27 sec)](/assets/Alexa_ESP8286_IR_control_v2_video_image.png)](https://photos.app.goo.gl/GmGifkKtMW2HBMPd7 "The Alexa ESP8266 IR controller in action (27 sec)")
 
