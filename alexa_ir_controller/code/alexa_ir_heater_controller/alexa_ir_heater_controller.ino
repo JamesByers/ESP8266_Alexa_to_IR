@@ -162,6 +162,7 @@ void loop() {
     // whilst the former works fine with current stable 2.3.0 version.
     // But, since it's not "async" anymore we have to manually poll for UDP
     // packets
+    
     fauxmo.handle();
 
     static unsigned long last = millis();
