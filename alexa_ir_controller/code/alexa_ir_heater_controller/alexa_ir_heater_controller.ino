@@ -90,7 +90,7 @@ void setup() {
     });
 
     fauxmo.onSetState([](unsigned char device_id, const char * device_name, bool state) {
-        // Logic for transmitting IR command for Heater device 1    
+        // Logic for transmitting IR commands when Alexa command is to Heater device 1    
         if (strcmp(device_name, "Heater device 1") == 0) {
           Serial.println("");
           Serial.print("Heater Device 1:");
@@ -104,11 +104,13 @@ void setup() {
             irsend.sendNEC(_1000_watts);
             delay(1000);
             Serial.println("Timer On with 1 hr");
-            irsend.sendNEC(timer);
+            irsend.sendNEC(timer);  // Send first to trigger heater to await timer command
             delay(1000);
-            irsend.sendNEC(timer); 
+            irsend.sendNEC(timer);  // Send again to trigger heater to add one hr to the timer
+              
             //delay(300);   // Uncomment to test LED by leaving it on 
-            //digitalWrite(LED, HIGH);   // Uncomment to test LED by leaving it on           
+            //digitalWrite(LED, HIGH);   // Uncomment to test LED by leaving it on
+              
             }
           else {
             Serial.println("Heater Off");
@@ -118,10 +120,10 @@ void setup() {
             }
           }
     
-        // Logic for transmitting IR command for Heater device 2
-        if (strcmp(device_name, "Heater device b") == 0) {
+        // Logic for transmitting IR commands when Alexa command is to Heater device 2
+        if (strcmp(device_name, "Heater device 2") == 0) {
           Serial.println("");
-          Serial.print("Heater Device b:");
+          Serial.print("Heater Device 2:");
           Serial.print(state);
           Serial.println("");
           if (state) {
@@ -134,10 +136,10 @@ void setup() {
             }
           }
     
-        // Logic for transmitting IR command for Heater device 3
+        // Logic for transmitting IR commands when Alexa command is to Heater device 3
         if (strcmp(device_name, "Heater device 3") == 0) {
           Serial.println("");
-          Serial.print("Heater Device 3:");
+          Serial.print("Heater device 3:");
           Serial.print(state);
           Serial.println("");
           if (state) {
@@ -145,7 +147,7 @@ void setup() {
             irsend.sendNEC(_1500_watts);      
             }
           else {
-            irsend.sendNEC(timer);  // Send first to trigger heater to await timer command
+            irsend.sendNEC(timer);
             delay(1000);
             irsend.sendNEC(timer);  // Send again to trigger heater to add one hr to the timer
             }
