@@ -1,5 +1,5 @@
 # ESP8266 Alexa to IR controller
-This repository demonstrates how to use an ESP8266 microcontroller to recieve Alexa commands and transmit corresponding IR commands. Specifically it demonstrates controlling a radiant heater that does not come with any documentation of the IR signals sent. However the code and technique can be leveraged for any IR device you want to control.
+This repository demonstrates how to use an ESP8266 microcontroller to recieve Alexa commands and transmit corresponding IR commands. Specifically it demonstrates controlling a radiant heater that does not come with documentation of the IR signals sent. However the code and technique can be leveraged for any IR device you want to control.
 
 This repository assumes you know how to use the Arduino IDE and program an Arduino.  I used a [NodeMCU 1.0 ESP8266 development board](https://www.amazon.com/HiLetgo-Internet-Development-Wireless-Micropython/dp/B010O1G1ES) however this code can be used with other ESP8266 development boards such as the [Adafruit HUZZAH ESP8266 Breakout](https://www.adafruit.com/product/2471) or [SparkFun ESP8266 Thing](https://www.sparkfun.com/products/13231)
 
