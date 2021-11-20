@@ -9,6 +9,7 @@ I obtained the IR codes by pushing each button on the remote and capturing it wi
 * Small signal transistor such as the 2N2222 or 555 IC to drive the LED
   * Demonstrating how to use a 555 timer IC instead of a small signal transistor is beyond the scope of this repository.  However to do so you use the 555 as shown in [this diagram](../assets/555_timer_as_buffer_to_drive_led.png).  The diagram shows a configuration that puts the 555 into buffer mode.  This is a subset of the Bistable Mode. You don't see it described much but it is a very viable use of a 555 IC. The buffer would be between NodeMCU pin and the LED in order to provide enough current to the LED without much load on the NodeMCU pin. Thus it provides the same function as the discrete transistor I show in the photos and breadboard image. There are other 555 diagrams in the [assets](../assets/) folder that may also be helpful.
 * 220 Ohm and 470 Ohm resistors
+ * Note that since the "Vin" pin on the ESP8266 outputs ~4.5v when the power is coming from the USB cord rather than 5v, the 220 Ohn resistor could instead be something like 200 Ohm instead abd be a bit brighter.  But I had 220 Ohm resistors on hand and with the 220 Ohm one the IR LED is bright enough for for my application.
 * IR LED
 
 ### Alexa to IR tranmitter circuit:
