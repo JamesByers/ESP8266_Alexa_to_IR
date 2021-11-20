@@ -5,8 +5,7 @@ This repository assumes you know how to use the Arduino IDE and program an Ardui
 
 ##### The implementation described here controls a radiant heater which comes with an IR remote. This repository contains two code sections
 1. [alexa_ir_controller](/alexa_ir_controller) (transmitter) - Circuit and code to use an ESP8266 to recieve Alexa commands and then issue the corresponding IR commands through an IR LED
-2. [ir_receiver](/ir_receiver) - Circuit and code to detect the IR command signals sent from an IR remote
-
+2. [ir_receiver](/ir_receiver) - Code to detect the IR command signals sent from an IR remote using a IR reciever part
 
 ##### See the controller in action:
 
