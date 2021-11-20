@@ -30,7 +30,7 @@ unsigned int _1500_watts = 0xFF4AB5;
 unsigned int timer = 0xFFE817;
 unsigned int heat_count = 3;
 
-const uint16_t kIrLed = 4                                                                  ;  // ESP8266 GPIO pin to use. Recommended: 4 (D2).
+const uint16_t kIrLed = 4;  // ESP8266 GPIO pin to use. Recommended: 4 (D2).
 IRsend irsend(kIrLed);  // Set the GPIO to be used to send the IR message.
 
 // -----------------------------------------------------------------------------
@@ -90,7 +90,7 @@ void setup() {
     });
 
     fauxmo.onSetState([](unsigned char device_id, const char * device_name, bool state) {
-        // Transmit IR command for Heater device 1    
+        // Logic for transmitting IR command for Heater device 1    
         if (strcmp(device_name, "Heater device 1") == 0) {
           Serial.println("");
           Serial.print("Heater Device 1:");
@@ -118,7 +118,7 @@ void setup() {
             }
           }
     
-        // Transmit IR command for Heater device 2
+        // Logic for transmitting IR command for Heater device 2
         if (strcmp(device_name, "Heater device b") == 0) {
           Serial.println("");
           Serial.print("Heater Device b:");
@@ -134,7 +134,7 @@ void setup() {
             }
           }
     
-        // Transmit IR command for Heater device 3
+        // Logic for transmitting IR command for Heater device 3
         if (strcmp(device_name, "Heater device 3") == 0) {
           Serial.println("");
           Serial.print("Heater Device 3:");
@@ -145,9 +145,9 @@ void setup() {
             irsend.sendNEC(_1500_watts);      
             }
           else {
-            irsend.sendNEC(timer);
+            irsend.sendNEC(timer);  // Send first to trigger heater to await timer command
             delay(1000);
-            irsend.sendNEC(timer);
+            irsend.sendNEC(timer);  // Send again to trigger heater to add one hr to the timer
             }
           }
     });    
